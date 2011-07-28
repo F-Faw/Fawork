@@ -1,0 +1,8 @@
+SetEnv PHP_VER 5
+
+Options -Indexes
+RewriteEngine on
+RewriteRule ^([a-zA-Z]+)-([0-9]+).html$ index.php?module=$1&act=$2
+RewriteRule ^([a-zA-Z]+)-([0-9]+)-([a-zA-Z0-9\-\_\/]*).html$ index.php?module=$1&act=$2&params=$3
+RewriteRule ^([a-zA-Z]+)-([a-zA-Z0-9\-]+).html$ ?module=$1&params=$2
+RewriteRule ^([a-zA-Z]+).html$ index.php?module=$1
